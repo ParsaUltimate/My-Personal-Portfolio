@@ -2,7 +2,7 @@
 
 ## High Priority
 
-- [ ] www.linkedin.com/in/parsaghaei
+- [x] www.linkedin.com/in/parsaghaei
 - [ ] شکل های کنترولر پلی استیشن.
 - [ ] سئو
 - [x] حذف بخش tech stack
