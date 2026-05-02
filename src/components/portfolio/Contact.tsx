@@ -6,7 +6,7 @@ export const Contact = () => {
     { icon: Mail, label: 'Email', handle: 'Get In Touch', href: 'mailto:contact@parsaghaei.dev' },
     { icon: Github, label: 'GitHub', handle: 'Open Profile', href: 'https://github.com/Dark-px' },
     { icon: Gamepad2, label: 'Itch.io', handle: 'Play Games', href: 'https://parsaghaei.itch.io' },
-    { icon: Linkedin, label: 'LinkedIn', handle: 'Connect', href: 'https://www.linkedin.com' },
+    { icon: Linkedin, label: 'LinkedIn', handle: 'Connect', href: 'https://www.linkedin.com/in/parsaghaei' },
     { icon: Palette, label: 'ArtStation', handle: 'View Portfolio', href: 'https://www.artstation.com' },
     { icon: Send, label: 'Telegram', handle: 'Send Message', href: 'https://t.me' },
   ];
