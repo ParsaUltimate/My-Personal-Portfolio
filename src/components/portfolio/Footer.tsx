@@ -1,4 +1,4 @@
-import { Globe, Github, Heart, Mail } from 'lucide-react';
+import { Globe, Github, Heart, Mail, Gamepad2, Linkedin, Palette, Send } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 export const Footer = () => {
@@ -8,9 +8,12 @@ export const Footer = () => {
   const getSectionHref = (id: string) => (onHomePage ? `#${id}` : `/#${id}`);
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/Dark-px', label: 'GitHub' },
-    { icon: Globe, href: 'https://parsaghaei.dev', label: 'Website' },
     { icon: Mail, href: 'mailto:contact@parsaghaei.dev', label: 'Email' },
+    { icon: Github, href: 'https://github.com/Dark-px', label: 'GitHub' },
+    { icon: Gamepad2, href: 'https://parsaghaei.itch.io', label: 'Itch.io' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/parsaghaei', label: 'LinkedIn' },
+    { icon: Palette, href: 'https://www.artstation.com', label: 'ArtStation' },
+    { icon: Send, href: 'https://t.me', label: 'Telegram' },
   ];
 
   return (
