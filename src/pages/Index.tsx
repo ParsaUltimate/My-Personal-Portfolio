@@ -11,7 +11,7 @@ import { ScrollProgress } from '@/components/portfolio/ScrollProgress';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-950 particle-bg">
+    <main className="min-h-screen bg-gray-950 particle-bg">
       <CustomCursor />
       <ScrollProgress />
       <Navigation />
@@ -38,7 +38,7 @@ const Index = () => {
 
       {/* Footer */}
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import path from "path";
 import { componentTagger } from "@0xminds/component-tagger";
+import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
 export default defineConfig(async ({ mode }) => {
@@ -33,19 +34,13 @@ export default defineConfig(async ({ mode }) => {
         canonicalUrl: "https://parsaghaei.dev/",
       };
 
-  const plugins: Array<unknown> = [];
-
-  try {
-    const reactPlugin = await import("@vitejs/plugin-react-swc");
-    plugins.push(reactPlugin.default());
-  } catch (error) {
-    const reason = error instanceof Error ? error.message : String(error);
-    console.warn(
-      `[vite-config] @vitejs/plugin-react-swc is unavailable, continuing without it. Reason: ${reason}`
-    );
-  }
-
-  plugins.push(
+  return {
+    server: {
+      host: "::",
+      port: 8080,
+    },
+    plugins: [
+      react(),
     {
       name: "inject-static-seo",
       transformIndexHtml(html: string) {
@@ -69,14 +64,45 @@ export default defineConfig(async ({ mode }) => {
         "**/ui/**", // Exclude shadcn/ui components
       ],
     })
-  );
-
-  return {
-    server: {
-      host: "::",
-      port: 8080,
+    ],
+    build: {
+      sourcemap: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+            'ui-vendor': [
+              '@radix-ui/react-dialog',
+              '@radix-ui/react-toast',
+              '@radix-ui/react-tooltip',
+              '@radix-ui/react-accordion',
+              '@radix-ui/react-avatar',
+              '@radix-ui/react-checkbox',
+              '@radix-ui/react-dropdown-menu',
+              '@radix-ui/react-popover',
+              '@radix-ui/react-select',
+              '@radix-ui/react-tabs',
+            ],
+            'query-vendor': ['@tanstack/react-query'],
+            'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+            'animation-vendor': ['lenis'],
+          },
+        },
+      },
+      cssCodeSplit: true,
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: mode === 'production',
+          drop_debugger: true,
+          pure_funcs: mode === 'production' ? ['console.log', 'console.info'] : [],
+        },
+      },
+      chunkSizeWarningLimit: 600,
     },
-    plugins,
+    optimizeDeps: {
+      include: ['react', 'react-dom', 'react-router-dom', '@tanstack/react-query'],
+    },
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),

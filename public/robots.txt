@@ -1,5 +1,4 @@
 User-agent: *
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://parsaghaei.dev/sitemap.xml

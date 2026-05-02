@@ -64,6 +64,8 @@ export const FeaturedBlogs = () => {
                       <img
                         src={post.thumbnail}
                         alt={post.title}
+                        width="400"
+                        height="160"
                         className="card-media-zoom h-40 w-full object-cover opacity-90"
                         loading="lazy"
                         referrerPolicy="no-referrer"

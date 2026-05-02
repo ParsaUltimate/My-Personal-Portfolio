@@ -51,7 +51,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-[clamp(3.75rem,5.4vw,5rem)]">
           {/* Logo */}
           <a href="#hero" className="inline-flex items-center gap-2.5 leading-none">
-            <img src="/logo-mark.svg" alt="PG logo" className="h-8 w-8 rounded-md" />
+            <img src="/logo-mark.svg" alt="PG logo" width="32" height="32" className="h-8 w-8 rounded-md" />
             <span className="mt-1 text-[9px] font-mono-display text-white/45 tracking-[0.08em]">
               SYSTEM_ONLINE // IN DEVELOPMENT
             </span>

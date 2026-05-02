@@ -1,4 +1,72 @@
-# Parsa Ghaei - Site Guide for AI Assistants
+# Parsa Ghaei - Portfolio Site Guide for AI Assistants
+
+Site: https://parsaghaei.dev
+
+## About Parsa
+Parsa Ghaei is a 16-year-old aspiring game developer from Iran, currently pursuing game development and game design. He is a computer student focused on learning Unity and C# to create interactive experiences.
+
+## Professional Focus
+- **Primary Skills**: Unity, C#, Gameplay scripting
+- **Additional Skills**: Basic Web Development, Writing GDD and ER, Version Control (Git & GitHub), Basic Linux, Team Communication Tools (HacknPlan, Notion, Slack, Discord, MS Teams), IT Skills
+- **Currently Learning**: Unity mastery, Basic Game feel & Design, Basic Pixel Art, Game industry understanding
+- **Future Goals**: Advanced Unreal Engine & C++, Basic 3D modeling with Blender
+- **Career Aspiration**: Game Director by age 35+
+
+## Interests & Vision
+- Fascinated by dystopian narratives, cyberpunk atmospheres, and post-apocalyptic worlds
+- Passionate about understanding how game systems work together to create player experiences
+- Goal: Move toward system design and creating independent, systems-driven games
+
+## Site Structure
+
+### Main Sections
+1. **Hero Section**
+   - Name: Parsa Ghaei
+   - Title: Aspiring Game Developer
+   - Tagline: "Crafting Interactive Experiences"
+   - Links: GitHub, Email, View Work
+
+2. **Learning Journey** (#journey)
+   - What I Know: Unity fundamentals, C# fundamentals, Gameplay scripting, Basic Web Development, Writing GDD and ER, Version Control (Git & GitHub), Basic Linux, Team Communication Tools, IT Skill
+   - Currently Learning: Unity mastery, Basic Game feel & Design, Basic Pixel Art, Game industry understanding
+   - Next Goals: Advanced Unreal Engine & C++, Basic 3D modeling with Blender
+   - Vision: Aims to become a Game Director by age 35+, leading creative and technical vision of game projects
+
+3. **About Section** (#about)
+   - Age: 16
+   - Education: Tech High
+   - Focus: Unity & C#
+   - Dream: Game Director
+   - Bio: Journey from computer curiosity to game development, focus on prototyping gameplay mechanics and analyzing game systems
+
+4. **Projects Section** (#projects)
+   - Showcase of game development projects
+   - Each project includes description, technologies used, and links
+
+5. **Blog & Devlog** (/blog)
+   - Development logs and articles
+   - Content pulled from Medium
+
+6. **Contact Section** (#contact)
+   - Email and social links
+   - GitHub profile
+
+## Technical Stack
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: Tailwind CSS
+- **Routing**: React Router v7
+- **Animations**: Custom CSS animations, Lenis smooth scroll
+- **UI Components**: Radix UI primitives
+- **Backend**: Supabase
+
+## Key Features
+- Responsive design optimized for mobile, tablet, and desktop
+- Custom cursor effects
+- Smooth scroll animations
+- Dark theme with brutalist design elements
+- Type-writer effect for name display
+- Modern card layouts with hover effects
+
 
 Site: https://parsaghaei.dev
 Prompts: https://prompts.parsaghaei.dev
@@ -16,3 +84,4 @@ Prompts: https://prompts.parsaghaei.dev
 ## Canonical URLs
 - Use https://parsaghaei.dev for main portfolio pages
 - Use https://prompts.parsaghaei.dev for prompt library pages
+

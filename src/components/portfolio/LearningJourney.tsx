@@ -9,6 +9,11 @@ export const LearningJourney = () => {
         'Basic Unity fundamentals',
         'Basic C# fundamentals',
         'Gameplay scripting',
+        'Basic Web Development',
+        'Writing GDD and ER',
+        'Version Control (Git & GitHub)',
+        'Basic Linux',
+        'Team Communication Tools (HacknPlan, Notion, Slack, Discord, MS Teams)',
         'IT Skill',
       ],
     },
@@ -17,7 +22,8 @@ export const LearningJourney = () => {
       icon: Circle,
       items: [
         'Continuing Unity to master core game development concepts',
-        'Game feel + Game Design',
+        'Basic Game feel & Design',
+        'Basic Pixel Art',
         'Better understanding of the game industry and personal growth paths',
       ],
     },
@@ -115,7 +121,7 @@ export const LearningJourney = () => {
                   <p className="text-[15px] md:text-base leading-8 text-white/65 text-justify">
                     I aim to build my professional path in the <span className="text-white/90 font-medium">game industry</span>{' '}
                     in a way that allows me to reach the position of <span className="text-white/90 font-medium">Game Director</span>{' '}
-                    by around the age of 30 — a place where I can lead both the creative and technical vision of a project, guiding a team of artists, programmers, and designers to create cohesive interactive experiences.
+                    by around the age of 35+ — a place where I can lead both the creative and technical vision of a project, guiding a team of artists, programmers, and designers to create cohesive interactive experiences.
                   </p>
                 </div>
 

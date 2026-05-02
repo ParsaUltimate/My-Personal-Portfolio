@@ -70,6 +70,8 @@ export const Projects = () => {
                 <img
                   src={project.media}
                   alt={project.title}
+                  width="400"
+                  height="160"
                   className="card-media-zoom h-40 w-full object-cover object-center opacity-90"
                   loading="lazy"
                 />
@@ -132,7 +134,7 @@ export const Projects = () => {
               data-cursor-preview="Open Devlog"
               className="text-sm font-bold text-white hover:text-white/70 transition-colors"
             >
-              Devlog
+              Read Development Blog
             </a>
           </div>
         </div>

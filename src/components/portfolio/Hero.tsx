@@ -56,6 +56,8 @@ export const Hero = () => {
           <img
             src="/Untitled-1@2x.webp"
             alt="Parsa portrait"
+            width="704"
+            height="880"
             className="w-full h-auto object-contain opacity-90"
             loading="eager"
             fetchPriority="high"
@@ -139,6 +141,8 @@ export const Hero = () => {
                 <img
                   src="/Untitled-1@2x.webp"
                   alt="Parsa portrait"
+                  width="704"
+                  height="880"
                   className="hero-portrait-image h-full w-full object-contain object-bottom"
                   loading="eager"
                   fetchPriority="high"

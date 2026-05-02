@@ -3,14 +3,16 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, lazy, Suspense } from "react";
 import Lenis from "lenis";
 import { scrollToHashTarget } from "./lib/scroll";
 
 import Index from "./pages/Index";
-import BlogPage from "./pages/BlogPage";
-import NotFound from "./pages/NotFound";
-import PromptsPage from "./pages/PromptsPage";
+
+// Lazy load non-critical pages
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const PromptsPage = lazy(() => import("./pages/PromptsPage"));
 
 const queryClient = new QueryClient();
 
@@ -251,6 +253,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <Suspense fallback={<div className="min-h-screen bg-gray-950" />}>
           <Routes>
             <Route path="/" element={isPromptsHost ? <PromptsPage /> : <Index />} />
             <Route path="/prompts" element={<PromptsPage />} />
@@ -258,6 +261,7 @@ const App = () => {
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={isPromptsHost ? <Navigate replace to="/" /> : <NotFound />} />
           </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
