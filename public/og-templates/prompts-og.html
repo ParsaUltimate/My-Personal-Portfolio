@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompts OG Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #050506;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .container {
+      width: 100%;
+      height: 100%;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px;
+      text-align: center;
+    }
+    
+    /* Corner brackets */
+    .corner {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+    .corner.tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+    .corner.tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+    .corner.bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+    .corner.br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+    
+    .icon {
+      width: 120px;
+      height: 120px;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    
+    .icon svg {
+      width: 60px;
+      height: 60px;
+      stroke: white;
+      fill: none;
+    }
+    
+    .label {
+      font-size: 16px;
+      font-family: 'Courier New', monospace;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+    }
+    
+    .title {
+      font-size: 72px;
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 30px;
+    }
+    
+    .subtitle {
+      font-size: 28px;
+      color: rgba(255, 255, 255, 0.3);
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    
+    .description {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.6;
+      max-width: 800px;
+    }
+    
+    .domain {
+      font-size: 18px;
+      font-family: 'Courier New', monospace;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+    
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        <line x1="9" y1="10" x2="15" y2="10"></line>
+        <line x1="12" y1="7" x2="12" y2="13"></line>
+      </svg>
+    </div>
+    
+    <div class="label">AI TOOLS // PRODUCTIVITY</div>
+    
+    <div class="title">
+      AI Prompt<br>
+      <span style="color: rgba(255, 255, 255, 0.3);">Library</span>
+    </div>
+    
+    <div class="subtitle">by Parsa Ghaei</div>
+    
+    <div class="description">
+      Curated collection of structured prompts for writing, research, visual design, and coding workflows
+    </div>
+    
+    <div class="domain">prompts.parsaghaei.dev</div>
+  </div>
+</body>
+</html>

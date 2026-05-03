@@ -22,15 +22,15 @@ export default defineConfig(async ({ mode }) => {
         canonicalUrl: "https://prompts.parsaghaei.dev/",
       }
     : {
-        title: "Parsa Ghaei | Game Developer & Designer",
+        title: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
         description:
-          "Parsa Ghaei - aspiring Game Developer and Game Designer studying Unity and C#. Building gameplay mechanics and documenting the journey into game development.",
+          "Hi, I'm Parsa — a 16-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
         keywords:
           "Game Developer, Game Designer, Unity, C#, Game Development, Portfolio, Parsa Ghaei",
-        ogTitle: "Parsa Ghaei | Game Developer & Designer",
+        ogTitle: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
         ogDescription:
-          "Aspiring Game Developer and Game Designer studying Unity and C#. Building gameplay mechanics and documenting the journey.",
-        ogImage: "/hero-bg.png",
+          "Hi, I'm Parsa — a 16-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
+        ogImage: "/og-portfolio.png",
         canonicalUrl: "https://parsaghaei.dev/",
       };
 

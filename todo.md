@@ -2,19 +2,24 @@
 
 ## High Priority
 
+- [ ] ریسپانسیو بودن توی دیوایس موبایل
+- [ ] Remove Three curated posts from Medium. You can choose them by updating MEDIUM_CONFIG.featuredPostLinks. 
+- [ ] کرسر دیسکریپشن و لوگو لینک ها رو چک کن
+- [x] طول مستطیل QUICK_FACTS رو کمتر کن
+- [ //] افزودن لوگو
+- [ ] درست کردن پروفایل ارت اتیشن.
+- [ ] افزودن سوشال X به گت این تاچ و جایگذاریش به جای تلگرام. ولی همه سوشال ها در فوتر باقی بمونن
+- [ ] اضافه کردن موزک بکگراند و ساند افکت
 - [x] www.linkedin.com/in/parsaghaei
 - [ ] شکل های کنترولر پلی استیشن.
 - [ ] سئو
 - [x] حذف بخش tech stack
-- [ ] گفتن چیزایی که بلدم تو what i know مثل داکیومنشن و ابزار های ارتباط تیمی ذکر داشتن تجربه کار تیمی ذکر فعال بودن در مراکز رشد بازی سازی در بخش درباره
+- [x] گفتن چیزایی که بلدم تو what i know مثل داکیومنشن و ابزار های ارتباط تیمی ذکر داشتن تجربه کار تیمی ذکر فعال بودن در مراکز رشد بازی سازی در بخش درباره
 - [x] تغییر سن رویای گیم دایرکتور شدن از ۳۰ به ۳۵+
 - [x] تنظیم `MEDIUM_CONFIG.username` در `src/lib/medium.ts`
 - [ ] جایگذاری ۳ لینک پست منتخب در `MEDIUM_CONFIG.featuredPostLinks`
 - [x] تست کامل مسیر `/blog` و `#Devlog` در دسکتاپ و موبایل
 - [ ] بازبینی محتوای Hero/Projects/About/Contact با متن نهایی
-- [ ] ساخت Open Graph/Twitter card اختصاصی برای دامنه اصلی `parsaghaei.dev` (portfolio preview card مستقل)
-- [ ] ساخت Open Graph/Twitter card اختصاصی برای ساب‌دامین `prompts.parsaghaei.dev` (prompts preview card مستقل)
-
 ## Cursor Hover Preview
 
 - [x] بهبود موقعیت Preview نزدیک لبه‌های صفحه (جلوگیری از خروج از viewport)

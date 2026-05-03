@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio OG Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #050506;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .container {
+      width: 100%;
+      height: 100%;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 80px;
+      gap: 60px;
+    }
+    
+    /* Corner brackets */
+    .corner {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+    .corner.tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+    .corner.tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+    .corner.bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+    .corner.br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+    
+    .image-section {
+      flex-shrink: 0;
+      width: 320px;
+      height: 400px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.9;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .label {
+      font-size: 14px;
+      font-family: 'Courier New', monospace;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 2px;
+    }
+    
+    .title {
+      font-size: 56px;
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+    
+    .description {
+      font-size: 22px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+      max-width: 600px;
+    }
+    
+    .domain {
+      font-size: 18px;
+      font-family: 'Courier New', monospace;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+    
+    <div class="image-section">
+      <img src="../Untitled-1@2x.webp" alt="Parsa Ghaei">
+    </div>
+    
+    <div class="content">
+      <div class="label">PORTFOLIO // GAME_DEVELOPER</div>
+      <div class="title">
+        Parsa Ghaei<br>
+        <span style="color: rgba(255, 255, 255, 0.3);">Game Developer</span>
+      </div>
+      <div class="description">
+        Hi, I'm Parsa — a 16-year-old game developer studying computer science in technical high school, currently learning Unity and C#.
+      </div>
+      <div class="domain">parsaghaei.dev</div>
+    </div>
+  </div>
+</body>
+</html>
