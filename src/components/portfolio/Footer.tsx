@@ -21,7 +21,7 @@ export const Footer = () => {
   return (
     <footer className="py-8 sm:py-10 md:py-12 border-t border-white/10 bg-[#050506]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-6 mb-6 sm:mb-8">
           <div>
             <h3 className="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4">PARSA GHAEI</h3>
             <p className="text-white/40 text-xs sm:text-sm leading-relaxed">
@@ -117,7 +117,7 @@ export const Footer = () => {
 
           <div>
             <h4 className="text-white font-semibold mb-4">Connect</h4>
-            <div className="flex gap-3">
+            <div className="flex gap-1.5">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
@@ -125,7 +125,7 @@ export const Footer = () => {
                   target={link.href.startsWith('http') ? "_blank" : undefined}
                   rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}
                   data-cursor-preview={`Open ${link.label}`}
-                  className="w-10 h-10 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white/20 transition-all"
+                  className="w-9 h-9 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white/20 transition-all flex-shrink-0"
                   aria-label={link.label}
                 >
                   <link.icon className="w-5 h-5" />
@@ -140,7 +140,7 @@ export const Footer = () => {
             © {currentYear} PARSA GHAEI // ALL_RIGHTS_RESERVED
           </p>
           <p className="text-white/30 text-sm flex items-center gap-2">
-            BUILT_WITH <Heart className="w-4 h-4" /> BY PARSA
+            BUILT_WITH <Heart className="w-5 h-5" /> BY PARSA
           </p>
         </div>
       </div>
