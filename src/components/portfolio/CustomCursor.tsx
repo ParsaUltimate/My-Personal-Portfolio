@@ -51,13 +51,25 @@ export const CustomCursor = () => {
 
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target;
-      if (!(target instanceof HTMLElement)) {
+      if (!(target instanceof HTMLElement) && !(target instanceof SVGElement)) {
         setIsHovering(false);
         hidePreview();
         return;
       }
 
-      const linkTarget = target.closest('a');
+      // Find the closest link or element with data-cursor-preview
+      let linkTarget: Element | null = null;
+      if (target instanceof HTMLElement) {
+        linkTarget = target.closest('a, [data-cursor-preview]');
+      } else if (target instanceof SVGElement) {
+        // For SVG elements, traverse up to find the parent link
+        let parent: Element | null = target;
+        while (parent && !(parent instanceof HTMLAnchorElement) && !parent.hasAttribute('data-cursor-preview')) {
+          parent = parent.parentElement;
+        }
+        linkTarget = parent;
+      }
+
       if (linkTarget instanceof HTMLAnchorElement) {
         const nextPreviewText =
           linkTarget.getAttribute('data-cursor-preview') ||

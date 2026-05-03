@@ -1,4 +1,5 @@
-import { Mail, Github, Gamepad2, Linkedin, Palette, Send, ExternalLink } from 'lucide-react';
+import { Mail, Github, Gamepad2, Linkedin, Palette, ExternalLink } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export const Contact = () => {
   const contacts = [
@@ -7,7 +8,7 @@ export const Contact = () => {
     { icon: Gamepad2, label: 'Itch.io', handle: 'Play Games', href: 'https://parsaghaei.itch.io' },
     { icon: Linkedin, label: 'LinkedIn', handle: 'Connect', href: 'https://www.linkedin.com/in/parsaghaei' },
     { icon: Palette, label: 'ArtStation', handle: 'View Portfolio', href: 'https://www.artstation.com' },
-    { icon: Send, label: 'Telegram', handle: 'Send Message', href: 'https://t.me' },
+    { icon: FaXTwitter, label: 'X', handle: 'Follow', href: 'https://x.com/ParsaUltimate' },
   ];
 
   return (
