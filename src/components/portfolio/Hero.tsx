@@ -128,7 +128,7 @@ export const Hero = () => {
             className="inline-flex items-center gap-3 text-sm text-white/40 hover:text-white transition-colors font-mono-display"
           >
             <Github className="w-4 h-4" />
-            @parsaghaei
+            @ParsaUltimate
           </a>
           </div>
           
