@@ -121,7 +121,7 @@ export const Hero = () => {
 
           {/* Social */}
           <a
-            href="https://github.com/Dark-px"
+            href="https://github.com/ParsaUltimate"
             target="_blank"
             rel="noopener noreferrer"
             data-cursor-preview="Open GitHub"

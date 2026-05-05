@@ -24,7 +24,7 @@ export const Projects = () => {
       status: 'PLANNING',
       media: '/coming-soon.png',
       actionLabel: 'GitHub',
-      actionHref: 'https://github.com/Dark-px',
+      actionHref: 'https://github.com/ParsaUltimate',
     },
     {
       number: '03',
@@ -36,7 +36,7 @@ export const Projects = () => {
       status: 'CONCEPT',
       media: '/coming-soon.png',
       actionLabel: 'GitHub',
-      actionHref: 'https://github.com/Dark-px',
+      actionHref: 'https://github.com/ParsaUltimate',
     },
   ];
 

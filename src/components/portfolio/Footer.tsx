@@ -10,7 +10,7 @@ export const Footer = () => {
 
   const socialLinks = [
     { icon: Mail, href: 'mailto:contact@parsaghaei.dev', label: 'Email' },
-    { icon: Github, href: 'https://github.com/Dark-px', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/ParsaUltimate', label: 'GitHub' },
     { icon: Gamepad2, href: 'https://parsaghaei.itch.io', label: 'Itch.io' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/parsaghaei', label: 'LinkedIn' },
     { icon: Palette, href: 'https://www.artstation.com', label: 'ArtStation' },

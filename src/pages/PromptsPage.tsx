@@ -1262,7 +1262,7 @@ const PromptsPage = () => {
             </a>
 
             <a
-              href="https://github.com/Dark-px"
+              href="https://github.com/ParsaUltimate"
               target="_blank"
               rel="noreferrer"
               onMouseEnter={() => {
