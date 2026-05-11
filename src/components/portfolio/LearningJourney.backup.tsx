@@ -82,89 +82,26 @@ export const LearningJourney = () => {
           className="modern-card border border-white/15 bg-[#070708] p-6 sm:p-8 md:p-12 relative overflow-hidden"
           style={{ animationDelay: '120ms' }}
         >
-          {/* Tech Lines Background */}
-          <div className="absolute inset-0 opacity-15">
-            {/* Horizontal tech lines */}
-            <div className="absolute top-[15%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-            <div className="absolute top-[35%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-            <div className="absolute top-[55%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
-            <div className="absolute top-[75%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
-            
-            {/* Vertical tech lines */}
-            <div className="absolute top-0 bottom-0 left-[20%] w-px bg-gradient-to-b from-transparent via-white/20 to-transparent" />
-            <div className="absolute top-0 bottom-0 left-[50%] w-px bg-gradient-to-b from-transparent via-white/25 to-transparent" />
-            <div className="absolute top-0 bottom-0 left-[80%] w-px bg-gradient-to-b from-transparent via-white/15 to-transparent" />
-            
-            {/* Subtle diagonal lines */}
-            <div className="absolute top-[10%] left-[15%] w-16 h-px bg-gradient-to-r from-white/20 to-transparent rotate-45 origin-left" />
-            <div className="absolute bottom-[12%] right-[18%] w-20 h-px bg-gradient-to-l from-white/15 to-transparent -rotate-45 origin-right" />
-          </div>
+          <div className="future-orb-a absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,255,255,0.08),transparent_34%),radial-gradient(circle_at_82%_76%,rgba(255,255,255,0.06),transparent_36%)]" />
+          <div className="future-grid-pan absolute inset-0 opacity-30 [background-image:linear-gradient(to_right,rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.04)_1px,transparent_1px)] [background-size:26px_26px]" />
+          <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_bottom,rgba(255,255,255,.08)_1px,transparent_1px)] [background-size:100%_6px]" />
+          <div className="future-ring-a absolute -top-20 right-[4%] w-72 h-72 rounded-full border border-white/10" />
+          <div className="future-ring-b absolute -bottom-20 left-[7%] w-64 h-64 rounded-full border border-white/10" />
+          <div className="absolute top-[18%] left-[20%] h-px w-28 bg-white/25 rotate-[20deg]" />
+          <div className="absolute top-[58%] left-[72%] h-px w-24 bg-white/20 -rotate-[24deg]" />
+          <div className="future-node absolute top-[44%] left-[52%] h-2 w-2 rounded-full border border-white/65 bg-white/40" />
+          <div className="future-node-strong absolute top-[22%] left-[66%] h-2.5 w-2.5 rounded-full border border-white/70 bg-white/90 shadow-[0_0_0_4px_rgba(255,255,255,0.09)]" />
+          <div className="future-node absolute top-[72%] left-[32%] h-2.5 w-2.5 rounded-full border border-white/60 bg-transparent" />
+          <div className="future-scan-beam absolute inset-x-0 top-0 h-20 pointer-events-none" />
 
-          {/* Animated Particles */}
-          <div className="absolute inset-0 overflow-hidden">
-            {/* Particle 1 */}
-            <div className="absolute top-[20%] left-[15%] w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDuration: '3s' }} />
-            <div className="absolute top-[20%] left-[15%] w-8 h-8 border border-white/8 rounded-full animate-ping" style={{ animationDuration: '3s' }} />
-            
-            {/* Particle 2 */}
-            <div className="absolute top-[45%] left-[70%] w-1.5 h-1.5 bg-white/60 rounded-full animate-pulse" style={{ animationDuration: '4s', animationDelay: '1s' }} />
-            <div className="absolute top-[45%] left-[70%] w-10 h-10 border border-white/10 rounded-full animate-ping" style={{ animationDuration: '4s', animationDelay: '1s' }} />
-            
-            {/* Particle 3 */}
-            <div className="absolute top-[65%] left-[25%] w-1 h-1 bg-white/45 rounded-full animate-pulse" style={{ animationDuration: '5s', animationDelay: '2s' }} />
-            <div className="absolute top-[65%] left-[25%] w-6 h-6 border border-white/8 rounded-full animate-ping" style={{ animationDuration: '5s', animationDelay: '2s' }} />
-            
-            {/* Particle 4 */}
-            <div className="absolute top-[30%] left-[85%] w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
-            <div className="absolute top-[30%] left-[85%] w-7 h-7 border border-white/9 rounded-full animate-ping" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
-            
-            {/* Particle 5 */}
-            <div className="absolute top-[80%] left-[60%] w-1.5 h-1.5 bg-white/55 rounded-full animate-pulse" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }} />
-            <div className="absolute top-[80%] left-[60%] w-9 h-9 border border-white/8 rounded-full animate-ping" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }} />
-            
-            {/* Small accent particles - very subtle */}
-            <div className="absolute top-[38%] left-[42%] w-0.5 h-0.5 bg-white/40 rounded-full animate-pulse" style={{ animationDuration: '6s', animationDelay: '3s' }} />
-            <div className="absolute top-[58%] left-[68%] w-0.5 h-0.5 bg-white/35 rounded-full animate-pulse" style={{ animationDuration: '7s', animationDelay: '2.5s' }} />
-            <div className="absolute top-[25%] left-[48%] w-0.5 h-0.5 bg-white/38 rounded-full animate-pulse" style={{ animationDuration: '5.5s', animationDelay: '4s' }} />
-          </div>
+          <div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-white/20" />
+          <div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-white/20" />
+          <div className="absolute bottom-3 left-3 w-10 h-10 border-b border-l border-white/20" />
+          <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-white/20" />
 
-          {/* Connection lines between particles - very subtle */}
-          <div className="absolute inset-0 opacity-5">
-            <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <line x1="15%" y1="20%" x2="70%" y2="45%" stroke="white" strokeWidth="1" opacity="0.3" />
-              <line x1="70%" y1="45%" x2="60%" y2="80%" stroke="white" strokeWidth="1" opacity="0.25" />
-              <line x1="25%" y1="65%" x2="15%" y2="20%" stroke="white" strokeWidth="1" opacity="0.2" />
-            </svg>
-          </div>
-
-          {/* Fine grid overlay */}
-          <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(to_right,rgba(255,255,255,.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.12)_1px,transparent_1px)] [background-size:50px_50px]" />
-
-          {/* Corner accents with inner detail */}
-          <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-white/20">
-            <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-white/30" />
-          </div>
-          <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-white/20">
-            <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-white/30" />
-          </div>
-          <div className="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-white/20">
-            <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-white/30" />
-          </div>
-          <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-white/20">
-            <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-white/30" />
-          </div>
-
-          {/* Subtle scan line effect */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-
-
-
-
-
-
-
-
+          <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="absolute top-0 right-0 w-28 h-28 border-r border-t border-white/10" />
 
           <span className="relative z-10 inline-block text-[10px] font-mono-display tracking-wider text-white/40 mb-3">
             002A // FUTURE_VISION
