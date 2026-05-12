@@ -1,34 +1,7 @@
-# Cache static assets with hashing for 1 year
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
+# Headers for prompts subdomain
+https://prompts.parsaghaei.dev/*
+  X-Robots-Tag: index, follow
 
-# Cache fonts for 1 year
-*.woff2
-  Cache-Control: public, max-age=31536000, immutable
-
-*.woff
-  Cache-Control: public, max-age=31536000, immutable
-
-# Cache images for 1 year
-*.webp
-  Cache-Control: public, max-age=31536000, immutable
-
-*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
-# Don't cache HTML
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
-
-# Cache manifest and robots for 1 day
-/site.webmanifest
-  Cache-Control: public, max-age=86400
-
-/robots.txt
-  Cache-Control: public, max-age=86400
+# Main site headers
+https://parsaghaei.dev/*
+  X-Robots-Tag: index, follow
