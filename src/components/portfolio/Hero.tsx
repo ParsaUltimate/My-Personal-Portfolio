@@ -54,13 +54,16 @@ export const Hero = () => {
         {/* Mobile/Tablet Image - Above Name */}
         <div className="lg:hidden w-full max-w-[17rem] sm:max-w-[22rem] mx-auto mb-4 sm:mb-6">
           <img
-            src="/Untitled-1@2x.webp"
-            alt="Parsa portrait"
-            width="704"
-            height="880"
+            src="/hero-portrait.webp"
+            srcSet="/hero-portrait-320w.webp 320w, /hero-portrait-480w.webp 480w, /hero-portrait-640w.webp 640w, /hero-portrait-733w.webp 733w"
+            sizes="(max-width: 430px) 272px, (max-width: 640px) 352px, 352px"
+            alt="Parsa Ghaei portrait — aspiring game developer and designer"
+            width="733"
+            height="1024"
             className="w-full h-auto object-contain opacity-90"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
           />
         </div>
         
@@ -139,13 +142,16 @@ export const Hero = () => {
               
               <div className="absolute bottom-[-12%] right-[2%] z-20 flex h-[114%] w-[94%] items-end justify-end">
                 <img
-                  src="/Untitled-1@2x.webp"
-                  alt="Parsa portrait"
-                  width="704"
-                  height="880"
+                  src="/hero-portrait.webp"
+                  srcSet="/hero-portrait-320w.webp 320w, /hero-portrait-480w.webp 480w, /hero-portrait-640w.webp 640w, /hero-portrait-733w.webp 733w"
+                  sizes="(max-width: 1440px) 640px, 733px"
+                  alt="Parsa Ghaei portrait — aspiring game developer and designer"
+                  width="733"
+                  height="1024"
                   className="hero-portrait-image h-full w-full object-contain object-bottom"
                   loading="eager"
                   fetchPriority="high"
+                  decoding="async"
                 />
               </div>
             </div>
