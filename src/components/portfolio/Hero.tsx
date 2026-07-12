@@ -73,7 +73,7 @@ export const Hero = () => {
             {/* Name with Brutalist Style */}
             <div className="space-y-1 sm:space-y-2">
               <h1 className="title-glow-loop animate-text-reveal text-[clamp(2rem,11vw,4.3rem)] max-[430px]:text-[clamp(1.72rem,10.6vw,2.25rem)] md:text-[clamp(2.52rem,9vw,6.48rem)] lg:text-[clamp(3.96rem,7.02vw,7.38rem)] font-black leading-[0.88] max-[430px]:leading-[0.94] md:leading-[0.84] tracking-tighter text-white brutalist-text lg:whitespace-nowrap">
-                {text}
+                {text || <span className="sr-only">Parsa Ghaei</span>}
                 {!isTypingDone && <span className="animate-pulse">|</span>}
               </h1>
               <div className="h-px w-full bg-white/10" />

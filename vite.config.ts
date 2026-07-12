@@ -20,6 +20,18 @@ export default defineConfig(({ mode }) => {
           "Structured prompts for writing, research, visual design, and coding workflows.",
         ogImage: "/og-prompts.svg",
         canonicalUrl: "https://prompts.parsaghaei.dev/",
+        schema: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "AI Prompt Library",
+          "url": "https://prompts.parsaghaei.dev/",
+          "author": {
+            "@type": "Person",
+            "name": "Parsa Ghaei",
+            "url": "https://parsaghaei.dev/"
+          },
+          "description": "A curated AI Prompt Library by Parsa Ghaei with structured prompts for writing, research, visual design, and coding workflows."
+        }, null, 2)
       }
     : {
         title: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
@@ -32,6 +44,20 @@ export default defineConfig(({ mode }) => {
           "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
         ogImage: "/og-portfolio.png",
         canonicalUrl: "https://parsaghaei.dev/",
+        schema: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Parsa Ghaei",
+          "url": "https://parsaghaei.dev/",
+          "image": "https://parsaghaei.dev/og-portfolio.png",
+          "jobTitle": "Game Developer & Designer",
+          "sameAs": [
+            "https://github.com/ParsaUltimate",
+            "https://parsaghaei.itch.io",
+            "https://www.linkedin.com/in/parsaghaei",
+            "https://x.com/ParsaUltimate"
+          ]
+        }, null, 2)
       };
 
   return {
@@ -51,7 +77,8 @@ export default defineConfig(({ mode }) => {
           .replace(/__SITE_OG_TITLE__/g, seo.ogTitle)
           .replace(/__SITE_OG_DESCRIPTION__/g, seo.ogDescription)
           .replace(/__SITE_OG_IMAGE__/g, seo.ogImage)
-          .replace(/__SITE_CANONICAL_URL__/g, seo.canonicalUrl);
+          .replace(/__SITE_CANONICAL_URL__/g, seo.canonicalUrl)
+          .replace(/__SITE_SCHEMA__/g, seo.schema);
       },
     },
     componentTagger({
