@@ -83,3 +83,4 @@ chore: update navigation version text to IN DEVELOPMENT
 - Use existing UI components from `components/ui/` before creating new ones
 - Follow the established pattern of exporting components via `index.ts` barrel files
 - When adding new sections, follow the structure in `components/portfolio/`
+- When modifying personal details (e.g., age, social links, bio), ensure updates are made consistently across both the visual components (such as `src/components/portfolio/Contact.tsx` or `Hero.tsx`) and the SEO metadata configurations in `vite.config.ts`.
