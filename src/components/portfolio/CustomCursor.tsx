@@ -1,24 +1,36 @@
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
+/**
+ * CustomCursor component renders a highly custom, performant cursor with interactive hover scaling
+ * and dynamic link preview tooltips. It utilizes GPU acceleration via translate3d and requestAnimationFrame.
+ */
 export const CustomCursor = () => {
+  // Cursor coordinate state (X and Y coordinates on viewport)
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  // Hover state (true when hovering over interactive elements)
   const [isHovering, setIsHovering] = useState(false);
+  // Visibility state (false if cursor leaves the window or tab is inactive)
   const [isVisible, setIsVisible] = useState(false);
+  // Text content to display inside the preview tooltip
   const [previewText, setPreviewText] = useState<string | null>(null);
+  // Visibility state of the preview tooltip (enables fade/slide transition)
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
+  // Reference to track the timeout for hiding the preview tooltip
   const previewHideTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
+    // Check if the device has a pointing device capable of hovering (e.g. mouse/trackpad)
     const mediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
     if (!mediaQuery.matches) {
-      return;
+      return; // Do not initialize custom cursor on touch devices (mobile, tablet)
     }
 
     let latestX = 0;
     let latestY = 0;
     let moveRafId: number | null = null;
 
+    // Clears the scheduled hide timeout for the preview tooltip
     const clearPreviewHideTimeout = () => {
       if (previewHideTimeoutRef.current !== null) {
         window.clearTimeout(previewHideTimeoutRef.current);
@@ -26,6 +38,7 @@ export const CustomCursor = () => {
       }
     };
 
+    // Smoothly hides the preview tooltip with a delay to match transition durations
     const hidePreview = () => {
       setIsPreviewVisible(false);
       clearPreviewHideTimeout();
@@ -34,12 +47,14 @@ export const CustomCursor = () => {
       }, 140);
     };
 
+    // Updates state with the latest coordinates and triggers visibility
     const flushCursorPosition = () => {
       setPosition({ x: latestX, y: latestY });
       setIsVisible(true);
       moveRafId = null;
     };
 
+    // Tracks mouse movements and throttles updates using requestAnimationFrame (60hz/120hz alignment)
     const moveCursor = (e: MouseEvent) => {
       latestX = e.clientX;
       latestY = e.clientY;
@@ -49,6 +64,7 @@ export const CustomCursor = () => {
       moveRafId = window.requestAnimationFrame(flushCursorPosition);
     };
 
+    // Handles hover states and extracts preview texts dynamically
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target;
       if (!(target instanceof HTMLElement) && !(target instanceof SVGElement)) {
@@ -57,12 +73,11 @@ export const CustomCursor = () => {
         return;
       }
 
-      // Find the closest link or element with data-cursor-preview
+      // Traverses up the DOM tree to find the closest link or element with data-cursor-preview
       let linkTarget: Element | null = null;
       if (target instanceof HTMLElement) {
         linkTarget = target.closest('a, [data-cursor-preview]');
       } else if (target instanceof SVGElement) {
-        // For SVG elements, traverse up to find the parent link
         let parent: Element | null = target;
         while (parent && !(parent instanceof HTMLAnchorElement) && !parent.hasAttribute('data-cursor-preview')) {
           parent = parent.parentElement;
@@ -70,18 +85,20 @@ export const CustomCursor = () => {
         linkTarget = parent;
       }
 
+      // If a preview target is found, set and display the preview tooltip
       if (linkTarget instanceof HTMLAnchorElement) {
         const nextPreviewText =
           linkTarget.getAttribute('data-cursor-preview') ||
           linkTarget.textContent?.trim() ||
           'Open Link';
         clearPreviewHideTimeout();
-        setPreviewText(nextPreviewText.slice(0, 56));
+        setPreviewText(nextPreviewText.slice(0, 56)); // Limit text to 56 characters
         setIsPreviewVisible(true);
       } else {
         hidePreview();
       }
 
+      // Detect if the target is interactive to trigger the scaling effect
       const isInteractive =
         target.tagName === 'A' ||
         target.tagName === 'BUTTON' ||
@@ -100,6 +117,7 @@ export const CustomCursor = () => {
       }
     };
 
+    // Hides the cursor when the mouse leaves the browser viewport
     const hideCursor = (e: MouseEvent) => {
       if (!e.relatedTarget) {
         setIsVisible(false);
@@ -110,17 +128,20 @@ export const CustomCursor = () => {
       }
     };
 
+    // Hides the cursor if the user switches browser tabs (tab becomes inactive)
     const handleVisibilityChange = () => {
       if (document.hidden) {
         setIsVisible(false);
       }
     };
 
+    // Attach all window/document mouse and visibility listeners
     window.addEventListener('mousemove', moveCursor);
     window.addEventListener('mouseover', handleMouseOver);
     window.addEventListener('mouseout', hideCursor);
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
+    // Clean up all event listeners and cancel scheduled requestAnimationFrames/timeouts on unmount
     return () => {
       window.removeEventListener('mousemove', moveCursor);
       window.removeEventListener('mouseover', handleMouseOver);
@@ -134,6 +155,7 @@ export const CustomCursor = () => {
   }, []);
 
   useEffect(() => {
+    // Synchronize HTML/Body class to hide the native system cursor when custom cursor is active
     const mediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
 
     const syncCursorClass = (matches: boolean) => {
@@ -147,12 +169,14 @@ export const CustomCursor = () => {
       syncCursorClass(event.matches);
     };
 
+    // Keep active class state in sync when media queries change
     if (typeof mediaQuery.addEventListener === 'function') {
       mediaQuery.addEventListener('change', handleChange);
     } else {
       mediaQuery.addListener(handleChange);
     }
 
+    // Remove classes and listeners on cleanup
     return () => {
       document.body.classList.remove('custom-cursor-active');
       document.documentElement.classList.remove('custom-cursor-active');
@@ -164,16 +188,18 @@ export const CustomCursor = () => {
     };
   }, []);
 
+  // Calculate position and boundaries for the preview tooltip to keep it inside the viewport
   const previewPosition = (() => {
     if (!previewText || typeof window === 'undefined') {
       return null;
     }
 
-    const margin = 12;
+    const margin = 12; // Safety margin from screen boundaries
     const compactMode = window.innerWidth < 1024;
     const fontSize = compactMode ? 10 : 11;
     const horizontalPadding = compactMode ? 8 : 10;
     const verticalPadding = compactMode ? 6 : 7;
+    // Estimate width based on character length
     const estimatedWidth = Math.min(
       compactMode ? 210 : 230,
       Math.max(120, previewText.length * (fontSize * 0.58) + horizontalPadding * 2)
@@ -183,16 +209,20 @@ export const CustomCursor = () => {
     let left = position.x + 24;
     let top = position.y + 20;
 
+    // Boundary detection: Right-edge collision
     if (left + estimatedWidth > window.innerWidth - margin) {
       left = position.x - estimatedWidth - 24;
     }
+    // Boundary detection: Left-edge collision
     if (left < margin) {
       left = margin;
     }
 
+    // Boundary detection: Bottom-edge collision
     if (top + estimatedHeight > window.innerHeight - margin) {
       top = position.y - estimatedHeight - 20;
     }
+    // Boundary detection: Top-edge collision
     if (top < margin) {
       top = margin;
     }
@@ -206,12 +236,15 @@ export const CustomCursor = () => {
     };
   })();
 
+  // Do not render anything during Server-Side Rendering (SSR) or when the cursor is invisible
   if (typeof document === 'undefined' || !isVisible) {
     return null;
   }
 
+  // Render the custom cursor elements using a Portal attached to the document body
   return createPortal(
     <>
+      {/* Outer interactive ring (scales and changes opacity) */}
       <div
         className="fixed pointer-events-none z-[9999]"
         style={{
@@ -225,14 +258,15 @@ export const CustomCursor = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          transition: 'transform 0.12s ease-out, background-color 0.12s ease-out',
-          transform: `translate3d(${position.x - 17}px, ${position.y - 17}px, 0) scale(${
-            isHovering ? 1.5 : 1
-          })`,
+          //the transition duration and make it smooth
+          transition: 'transform 0.01s ease-out, background-color 0.12s ease-out',
+          transform: `translate3d(${position.x - 17}px, ${position.y - 17}px, 0) scale(${isHovering ? 1.5 : 1
+            })`,
           backgroundColor: isHovering ? 'rgba(255,255,255,0.1)' : 'transparent',
           willChange: 'transform, background-color',
         }}
       >
+        {/* Inner dot */}
         <div
           style={{
             width: '4px',
@@ -241,6 +275,7 @@ export const CustomCursor = () => {
           }}
         />
       </div>
+      {/* Link preview tooltip */}
       {previewText && (
         <div
           className="fixed pointer-events-none z-[10000]"
