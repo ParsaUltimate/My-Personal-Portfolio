@@ -3,7 +3,7 @@
 Site: https://parsaghaei.dev
 
 ## About Parsa
-Parsa Ghaei is a 16-year-old aspiring game developer from Iran, currently pursuing game development and game design. He is a computer student focused on learning Unity and C# to create interactive experiences.
+Parsa Ghaei is a 17-year-old aspiring game developer from Iran, currently pursuing game development and game design. He is a computer student focused on learning Unity and C# to create interactive experiences.
 
 ## Professional Focus
 - **Primary Skills**: Unity, C#, Gameplay scripting
@@ -33,7 +33,7 @@ Parsa Ghaei is a 16-year-old aspiring game developer from Iran, currently pursui
    - Vision: Aims to become a Game Director by age 35+, leading creative and technical vision of game projects
 
 3. **About Section** (#about)
-   - Age: 16
+   - Age: 17
    - Education: Tech High
    - Focus: Unity & C#
    - Dream: Game Director

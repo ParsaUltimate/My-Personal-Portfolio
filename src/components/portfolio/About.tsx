@@ -72,7 +72,7 @@ export const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-8 pb-4 border-b border-white/5">
                   <span className="text-white/50">Age</span>
-                  <span className="text-white font-bold">16</span>
+                  <span className="text-white font-bold">17</span>
                 </div>
                 <div className="flex items-center gap-8 pb-4 border-b border-white/5">
                   <span className="text-white/50">Education</span>

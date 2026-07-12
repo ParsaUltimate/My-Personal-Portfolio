@@ -4,7 +4,7 @@ import { componentTagger } from "@0xminds/component-tagger";
  import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
-export default defineConfig(async ({ mode }) => {
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const isPromptsVariant = env.VITE_SITE_VARIANT === "prompts";
 
@@ -24,12 +24,12 @@ export default defineConfig(async ({ mode }) => {
     : {
         title: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
         description:
-          "Hi, I'm Parsa — a 16-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
+          "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
         keywords:
           "Game Developer, Game Designer, Unity, C#, Game Development, Portfolio, Parsa Ghaei",
         ogTitle: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
         ogDescription:
-          "Hi, I'm Parsa — a 16-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
+          "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
         ogImage: "/og-portfolio.png",
         canonicalUrl: "https://parsaghaei.dev/",
       };
