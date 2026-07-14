@@ -10,7 +10,10 @@ export const Projects = () => {
         'Currently in development. Follow my journey as I build my first playable prototype.',
       technologies: 'UNITY / C#',
       status: 'IN_DEVELOPMENT',
-      media: '/coming-soon.png',
+      media: '/coming-soon-800.png',
+      mediaWebp: '/coming-soon-800.webp',
+      mediaSrcSet: '/coming-soon-400.png 400w, /coming-soon-800.png 800w',
+      mediaWebpSrcSet: '/coming-soon-400.webp 400w, /coming-soon-800.webp 800w',
       actionLabel: 'Play',
       actionHref: 'https://parsaghaei.itch.io',
     },
@@ -22,7 +25,10 @@ export const Projects = () => {
         'A sandbox for testing interaction ideas, movement feel, and core gameplay loops.',
       technologies: 'UNITY / C# / PROTOTYPING',
       status: 'PLANNING',
-      media: '/coming-soon.png',
+      media: '/coming-soon-800.png',
+      mediaWebp: '/coming-soon-800.webp',
+      mediaSrcSet: '/coming-soon-400.png 400w, /coming-soon-800.png 800w',
+      mediaWebpSrcSet: '/coming-soon-400.webp 400w, /coming-soon-800.webp 800w',
       actionLabel: 'GitHub',
       actionHref: 'https://github.com/ParsaUltimate',
     },
@@ -34,7 +40,10 @@ export const Projects = () => {
         'Preparing the next game concept while improving systems-driven design skills.',
       technologies: 'UNITY / C#',
       status: 'CONCEPT',
-      media: '/coming-soon.png',
+      media: '/coming-soon-800.png',
+      mediaWebp: '/coming-soon-800.webp',
+      mediaSrcSet: '/coming-soon-400.png 400w, /coming-soon-800.png 800w',
+      mediaWebpSrcSet: '/coming-soon-400.webp 400w, /coming-soon-800.webp 800w',
       actionLabel: 'GitHub',
       actionHref: 'https://github.com/ParsaUltimate',
     },
@@ -67,14 +76,29 @@ export const Projects = () => {
               style={{ animationDelay: `${index * 90}ms` }}
             >
               <div className="mb-6 overflow-hidden border border-white/10 bg-black/30">
-                <img
-                  src={project.media}
-                  alt={project.title}
-                  width="400"
-                  height="160"
-                  className="card-media-zoom h-40 w-full object-cover object-center opacity-90"
-                  loading="lazy"
-                />
+                <picture className="block w-full">
+                  <source
+                    type="image/webp"
+                    srcSet={project.mediaWebp
+                      ? project.mediaWebpSrcSet
+                      : undefined}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <source
+                    type="image/png"
+                    srcSet={project.mediaSrcSet}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <img
+                    src={project.media}
+                    alt={project.title}
+                    width="400"
+                    height="160"
+                    className="card-media-zoom h-40 w-full object-cover object-center opacity-90"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
 
               {/* Number */}

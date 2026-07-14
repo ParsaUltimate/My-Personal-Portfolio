@@ -2,6 +2,7 @@
 
 ## High Priority
 
+- [ ] favicon هنوز مشکل داره.
 - [ ] ریسپانسیو بودن توی دیوایس موبایل
 - [ ] Remove Three curated posts from Medium. You can choose them by updating MEDIUM_CONFIG.featuredPostLinks. 
 - [ ] کرسر دیسکریپشن و لوگو لینک ها رو چک کن
