@@ -135,3 +135,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 ACTION-PLAN.md
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+.agents/**/.venv/
