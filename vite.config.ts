@@ -6,61 +6,33 @@ import { componentTagger } from "@0xminds/component-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  const isPromptsVariant = env.VITE_SITE_VARIANT === "prompts";
-
-  const seo = isPromptsVariant
-    ? {
-        title: "AI Prompt Library | Parsa Ghaei",
-        description:
-          "A curated AI Prompt Library by Parsa Ghaei with structured prompts for writing, research, visual design, and coding workflows.",
-        keywords:
-          "AI prompts, Prompt library, ChatGPT prompts, Claude prompts, Gemini prompts, Parsa Ghaei",
-        ogTitle: "AI Prompt Library | Parsa Ghaei",
-        ogDescription:
-          "Structured prompts for writing, research, visual design, and coding workflows.",
-        ogImage: "/og-prompts.svg",
-        canonicalUrl: "https://prompts.parsaghaei.dev/",
-        h1: "AI Prompt Library | Parsa Ghaei",
-        schema: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "AI Prompt Library",
-          "url": "https://prompts.parsaghaei.dev/",
-          "author": {
-            "@type": "Person",
-            "name": "Parsa Ghaei",
-            "url": "https://parsaghaei.dev/"
-          },
-          "description": "A curated AI Prompt Library by Parsa Ghaei with structured prompts for writing, research, visual design, and coding workflows."
-        }, null, 2)
-      }
-    : {
-        title: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
-        description:
-          "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
-        keywords:
-          "Game Developer, Game Designer, Unity, C#, Game Development, Portfolio, Parsa Ghaei",
-        ogTitle: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
-        ogDescription:
-          "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
-        ogImage: "/og-portfolio.png",
-        canonicalUrl: "https://parsaghaei.dev/",
-        h1: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
-        schema: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Parsa Ghaei",
-          "url": "https://parsaghaei.dev/",
-          "image": "https://parsaghaei.dev/og-portfolio.png",
-          "jobTitle": "Game Developer & Designer",
-          "sameAs": [
-            "https://github.com/ParsaUltimate",
-            "https://parsaghaei.itch.io",
-            "https://www.linkedin.com/in/parsaghaei",
-            "https://x.com/ParsaUltimate"
-          ]
-        }, null, 2)
-      };
+  const seo = {
+    title: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
+    description:
+      "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
+    keywords:
+      "Game Developer, Game Designer, Unity, C#, Game Development, Portfolio, Parsa Ghaei",
+    ogTitle: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
+    ogDescription:
+      "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
+    ogImage: "/og-portfolio.png",
+    canonicalUrl: "https://parsaghaei.dev/",
+    h1: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
+    schema: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Parsa Ghaei",
+      "url": "https://parsaghaei.dev/",
+      "image": "https://parsaghaei.dev/og-portfolio.png",
+      "jobTitle": "Game Developer & Designer",
+      "sameAs": [
+        "https://github.com/ParsaUltimate",
+        "https://parsaghaei.itch.io",
+        "https://www.linkedin.com/in/parsaghaei",
+        "https://x.com/ParsaUltimate"
+      ]
+    }, null, 2)
+  };
 
   return {
     server: {

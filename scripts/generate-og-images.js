@@ -47,7 +47,6 @@ async function generateOGImage(htmlFile, outputFile) {
     console.log('🎨 Generating Open Graph images...\n');
     
     await generateOGImage('portfolio-og.html', 'og-portfolio.png');
-    await generateOGImage('prompts-og.html', 'og-prompts.png');
     
     console.log('\n✅ All OG images generated successfully!');
     console.log('\nNext steps:');

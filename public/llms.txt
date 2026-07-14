@@ -6,7 +6,6 @@
 - **Developer**: Parsa Ghaei (17 years old)
 - **Primary Focus**: Unity, C#, Gameplay Scripting, System Design
 - **Portfolio Website**: [parsaghaei.dev](https://parsaghaei.dev/)
-- **Prompt Library**: [prompts.parsaghaei.dev](https://prompts.parsaghaei.dev/)
 - **Blog & Devlog**: [parsaghaei.dev/blog](https://parsaghaei.dev/blog)
 
 ## About Parsa
@@ -24,7 +23,6 @@ Parsa Ghaei is a 17-year-old aspiring game developer from Iran. He is currently 
 - [Projects Showcase](https://parsaghaei.dev/#projects) - Catalog of game projects, gameplay prototypes, and design works
 - [Learning Journey](https://parsaghaei.dev/#journey) - Active tracking of technologies learned, current focuses, and upcoming targets
 - [Featured Blogs](https://parsaghaei.dev/#featured_blogs) - Recent devlogs and articles pulled from Medium
-- [Prompt Library](https://prompts.parsaghaei.dev/) - A curated library of structured AI prompts for coding, design, and research workflows
 - [Contact Info](https://parsaghaei.dev/#contact) - Social media channels and direct mail contact details
 
 ## Social & Profile Links

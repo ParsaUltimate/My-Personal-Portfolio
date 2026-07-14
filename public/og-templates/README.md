@@ -4,7 +4,6 @@
 
 ## فایل‌ها:
 - `portfolio-og.html` - کارت OG برای دامنه اصلی (parsaghaei.dev)
-- `prompts-og.html` - کارت OG برای ساب‌دامین (prompts.parsaghaei.dev)
 
 ## نحوه تولید تصاویر:
 
@@ -38,7 +37,6 @@ async function generateOGImage(htmlFile, outputFile) {
 
 (async () => {
   await generateOGImage('portfolio-og.html', 'og-portfolio.png');
-  await generateOGImage('prompts-og.html', 'og-prompts.png');
 })();
 SCRIPT
 
@@ -51,9 +49,7 @@ node scripts/generate-og-images.js
 - https://htmlcsstoimage.com/
 - https://www.bannerbear.com/
 
-## خروجی نهایی:
 - `/public/og-portfolio.png` (1200x630)
-- `/public/og-prompts.png` (1200x630) - قبلاً موجود است
 
 ## تست کردن:
 بعد از تولید تصاویر، می‌توانید با این ابزارها تست کنید:
