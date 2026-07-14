@@ -44,15 +44,14 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-[#050506]/90 md:bg-[#050506]/80 md:backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-[#050506]/90 md:bg-[#050506]/80 md:backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-[clamp(1rem,2.2vw,1.5rem)]">
         <div className="flex items-center justify-between h-[clamp(3.75rem,5.4vw,5rem)]">
           {/* Logo */}
           <a href="#hero" className="inline-flex items-center gap-2.5 leading-none">
-            <img src="/logo-mark.svg" alt="PG logo" width="32" height="32" className="h-8 w-8 rounded-md" />
+            <img src="/logo-mark.svg" alt="PG logo" width="65" height="65" className="h-11 w-11 rounded-md" />
             <span className="mt-1 text-[9px] font-mono-display text-white/45 tracking-[0.08em]">
               SYSTEM_ONLINE // IN DEVELOPMENT
             </span>
@@ -91,14 +90,12 @@ export const Navigation = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden overflow-hidden border-t border-white/10 bg-[#050506]/95 backdrop-blur-xl transition-all duration-300 ease-out ${
-            isMobileMenuOpen ? 'max-h-96 opacity-100 py-4' : 'max-h-0 opacity-0 py-0'
-          }`}
+          className={`md:hidden overflow-hidden border-t border-white/10 bg-[#050506]/95 backdrop-blur-xl transition-all duration-300 ease-out ${isMobileMenuOpen ? 'max-h-96 opacity-100 py-4' : 'max-h-0 opacity-0 py-0'
+            }`}
         >
           <div
-            className={`flex flex-col items-center gap-4 text-center transition-all duration-300 ${
-              isMobileMenuOpen ? 'translate-y-0' : '-translate-y-2'
-            }`}
+            className={`flex flex-col items-center gap-4 text-center transition-all duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-2'
+              }`}
           >
             {navItems.map((item) => (
               <a
