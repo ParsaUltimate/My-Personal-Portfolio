@@ -1,87 +1,36 @@
-# Parsa Ghaei - Portfolio Site Guide for AI Assistants
+# Parsa Ghaei
 
-Site: https://parsaghaei.dev
+> Portfolio guide and AI assistant resource file for Parsa Ghaei, aspiring game developer and designer.
+
+## Key Details
+- **Developer**: Parsa Ghaei (17 years old)
+- **Primary Focus**: Unity, C#, Gameplay Scripting, System Design
+- **Portfolio Website**: [parsaghaei.dev](https://parsaghaei.dev/)
+- **Prompt Library**: [prompts.parsaghaei.dev](https://prompts.parsaghaei.dev/)
+- **Blog & Devlog**: [parsaghaei.dev/blog](https://parsaghaei.dev/blog)
 
 ## About Parsa
-Parsa Ghaei is a 17-year-old aspiring game developer from Iran, currently pursuing game development and game design. He is a computer student focused on learning Unity and C# to create interactive experiences.
+Parsa Ghaei is a 17-year-old aspiring game developer from Iran. He is currently studying computer science in a technical high school, focusing on Unity and C# to create interactive experiences. He enjoys prototyping gameplay mechanics, writing Game Design Documents (GDD), and learning system design.
 
-## Professional Focus
-- **Primary Skills**: Unity, C#, Gameplay scripting
-- **Additional Skills**: Basic Web Development, Writing GDD and ER, Version Control (Git & GitHub), Basic Linux, Team Communication Tools (HacknPlan, Notion, Slack, Discord, MS Teams), IT Skills
-- **Currently Learning**: Unity mastery, Basic Game feel & Design, Basic Pixel Art, Game industry understanding
-- **Future Goals**: Advanced Unreal Engine & C++, Basic 3D modeling with Blender
-- **Career Aspiration**: Game Director by age 35+
+## Professional Focus & Skills
+- **Game Engine**: Unity (Fundamentals, Master class path), C# (Gameplay scripting)
+- **Tooling & Workflow**: Git, GitHub, basic Linux
+- **Teamwork**: HacknPlan, Notion, Slack, Discord, MS Teams
+- **Future Learning**: Unreal Engine, C++, 3D Modeling (Blender), Pixel Art
+- **Long-term Goal**: Game Director by age 35+
 
-## Interests & Vision
-- Fascinated by dystopian narratives, cyberpunk atmospheres, and post-apocalyptic worlds
-- Passionate about understanding how game systems work together to create player experiences
-- Goal: Move toward system design and creating independent, systems-driven games
+## Site Structure & Key Links
+- [Main Portfolio](https://parsaghaei.dev/) - Main entry point containing hero section, projects showcase, and learning journey
+- [Projects Showcase](https://parsaghaei.dev/#projects) - Catalog of game projects, gameplay prototypes, and design works
+- [Learning Journey](https://parsaghaei.dev/#journey) - Active tracking of technologies learned, current focuses, and upcoming targets
+- [Featured Blogs](https://parsaghaei.dev/#featured_blogs) - Recent devlogs and articles pulled from Medium
+- [Prompt Library](https://prompts.parsaghaei.dev/) - A curated library of structured AI prompts for coding, design, and research workflows
+- [Contact Info](https://parsaghaei.dev/#contact) - Social media channels and direct mail contact details
 
-## Site Structure
-
-### Main Sections
-1. **Hero Section**
-   - Name: Parsa Ghaei
-   - Title: Aspiring Game Developer
-   - Tagline: "Crafting Interactive Experiences"
-   - Links: GitHub, Email, View Work
-
-2. **Learning Journey** (#journey)
-   - What I Know: Unity fundamentals, C# fundamentals, Gameplay scripting, Basic Web Development, Writing GDD and ER, Version Control (Git & GitHub), Basic Linux, Team Communication Tools, IT Skill
-   - Currently Learning: Unity mastery, Basic Game feel & Design, Basic Pixel Art, Game industry understanding
-   - Next Goals: Advanced Unreal Engine & C++, Basic 3D modeling with Blender
-   - Vision: Aims to become a Game Director by age 35+, leading creative and technical vision of game projects
-
-3. **About Section** (#about)
-   - Age: 17
-   - Education: Tech High
-   - Focus: Unity & C#
-   - Dream: Game Director
-   - Bio: Journey from computer curiosity to game development, focus on prototyping gameplay mechanics and analyzing game systems
-
-4. **Projects Section** (#projects)
-   - Showcase of game development projects
-   - Each project includes description, technologies used, and links
-
-5. **Blog & Devlog** (/blog)
-   - Development logs and articles
-   - Content pulled from Medium
-
-6. **Contact Section** (#contact)
-   - Email and social links
-   - GitHub profile
-
-## Technical Stack
-- **Frontend**: React, TypeScript, Vite
-- **Styling**: Tailwind CSS
-- **Routing**: React Router v7
-- **Animations**: Custom CSS animations, Lenis smooth scroll
-- **UI Components**: Radix UI primitives
-- **Backend**: Supabase
-
-## Key Features
-- Responsive design optimized for mobile, tablet, and desktop
-- Custom cursor effects
-- Smooth scroll animations
-- Dark theme with brutalist design elements
-- Type-writer effect for name display
-- Modern card layouts with hover effects
-
-
-Site: https://parsaghaei.dev
-Prompts: https://prompts.parsaghaei.dev
-
-## Primary Pages
-- Home: https://parsaghaei.dev/
-- Blog and Devlog: https://parsaghaei.dev/blog
-- Prompt Library: https://prompts.parsaghaei.dev/
-
-## Scope
-- Personal portfolio content
-- Blog and devlog posts pulled from Medium
-- Curated AI prompt library
-
-## Canonical URLs
-- Use https://parsaghaei.dev for main portfolio pages
-- Use https://prompts.parsaghaei.dev for prompt library pages
-
+## Social & Profile Links
+- [GitHub Profile](https://github.com/ParsaUltimate) - Development repository and project source codes
+- [Itch.io Profile](https://parsaghaei.itch.io) - Playable builds, prototypes, and game releases
+- [LinkedIn Profile](https://www.linkedin.com/in/parsaghaei) - Professional network and updates
+- [X / Twitter Profile](https://x.com/ParsaUltimate) - Development updates and game dev thoughts
+- [ArtStation Profile](https://www.artstation.com) - Game art, concept art, and visual designs
+- [Contact Email](mailto:contact@parsaghaei.dev) - Direct communication channel

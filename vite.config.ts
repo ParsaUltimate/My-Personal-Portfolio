@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
           "Structured prompts for writing, research, visual design, and coding workflows.",
         ogImage: "/og-prompts.svg",
         canonicalUrl: "https://prompts.parsaghaei.dev/",
+        h1: "AI Prompt Library | Parsa Ghaei",
         schema: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -44,6 +45,7 @@ export default defineConfig(({ mode }) => {
           "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
         ogImage: "/og-portfolio.png",
         canonicalUrl: "https://parsaghaei.dev/",
+        h1: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
         schema: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
@@ -78,7 +80,8 @@ export default defineConfig(({ mode }) => {
           .replace(/__SITE_OG_DESCRIPTION__/g, seo.ogDescription)
           .replace(/__SITE_OG_IMAGE__/g, seo.ogImage)
           .replace(/__SITE_CANONICAL_URL__/g, seo.canonicalUrl)
-          .replace(/__SITE_SCHEMA__/g, seo.schema);
+          .replace(/__SITE_SCHEMA__/g, seo.schema)
+          .replace(/__SITE_H1__/g, seo.h1);
       },
     },
     componentTagger({

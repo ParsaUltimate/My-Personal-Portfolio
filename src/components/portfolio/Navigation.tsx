@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,13 +70,13 @@ export const Navigation = () => {
                 {item.label}
               </a>
             ))}
-            <a
-              href="/blog"
+            <Link
+              to="/blog"
               data-cursor-preview="Go To Blog Page"
               className="button-glow-hover inline-flex items-center bg-white text-black text-xs font-bold tracking-wider px-4 py-2 rounded-l-sm rounded-r-full border-2 border-white hover:bg-white/90 transition-colors"
             >
               GO TO BLOG PAGE
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
