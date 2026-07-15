@@ -94,7 +94,7 @@ export const Projects = () => {
                     alt={project.title}
                     width="400"
                     height="160"
-                    className="card-media-zoom h-40 w-full object-cover object-center opacity-90"
+                    className="card-media-zoom h-40 w-full object-contain object-center opacity-90"
                     loading="lazy"
                     decoding="async"
                   />

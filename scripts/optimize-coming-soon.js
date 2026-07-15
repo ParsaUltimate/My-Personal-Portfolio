@@ -24,9 +24,9 @@ const OUTDIR = path.resolve(__dirname, '../public');
 const WIDTHS = [400, 800];
 
 async function run() {
-  // First pass: trim transparent/white borders and get tight bounds
+  // First pass: extract the exact bounding box for the text to match 2.5:1 ratio
   const base = sharp(SRC);
-  const trimmed = base.trim({ threshold: 10 }); // trim near-white & transparent edges
+  const trimmed = base.extract({ left: 35, top: 369, width: 960, height: 206 });
 
   const meta = await trimmed.clone().metadata();
   console.log(`Trimmed size: ${meta.width}x${meta.height}`);

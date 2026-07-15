@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { pathname } = useLocation();
+  const onHomePage = pathname === '/';
+  
+  const getHref = (hash: string) => onHomePage ? hash : `/${hash}`;
 
   useEffect(() => {
     let rafId: number | null = null;
@@ -50,7 +54,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-[clamp(1rem,2.2vw,1.5rem)]">
         <div className="flex items-center justify-between h-[clamp(3.75rem,5.4vw,5rem)]">
           {/* Logo */}
-          <a href="#hero" className="inline-flex items-center gap-2.5 leading-none">
+          <a href={getHref('#hero')} className="inline-flex items-center gap-2.5 leading-none">
             <img src="/logo-mark.svg" alt="PG logo" width="65" height="65" className="h-11 w-11 rounded-md" />
             <span className="mt-1 text-[9px] font-mono-display text-white/45 tracking-[0.08em]">
               SYSTEM_ONLINE // IN DEVELOPMENT
@@ -62,7 +66,7 @@ export const Navigation = () => {
             {navItems.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={getHref(item.href)}
                 data-cursor-preview={`Go To ${item.label.replace(/_/g, " ")}`}
                 className="nav-link-animated relative inline-block text-xs font-mono-display text-white/50 hover:text-white transition-colors tracking-wider before:absolute before:-inset-x-2 before:-inset-y-2 before:content-['']"
               >
@@ -100,7 +104,7 @@ export const Navigation = () => {
             {navItems.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={getHref(item.href)}
                 data-cursor-preview={`Go To ${item.label.replace(/_/g, " ")}`}
                 className="relative inline-block py-2 text-sm font-mono-display text-white/50 transition-colors hover:text-white before:absolute before:-inset-x-2 before:-inset-y-2 before:content-['']"
                 onClick={() => setIsMobileMenuOpen(false)}

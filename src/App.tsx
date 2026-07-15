@@ -11,6 +11,7 @@ import Index from "./pages/Index";
 
 // Lazy load non-critical pages
 const BlogPage = lazy(() => import("./pages/BlogPage"));
+const DownloadsPage = lazy(() => import("./pages/DownloadsPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -253,6 +254,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/downloads" element={<DownloadsPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

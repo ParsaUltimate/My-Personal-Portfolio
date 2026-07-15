@@ -1,4 +1,4 @@
-import { Globe, Github, Heart, Mail, Gamepad2, Linkedin, Palette, Send } from 'lucide-react';
+import { Globe, Github, Heart, Mail, Gamepad2, Linkedin, Palette, Send, ExternalLink } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 import { useLocation } from 'react-router-dom';
 
@@ -93,6 +93,16 @@ export const Footer = () => {
                   className="text-white/40 hover:text-white transition-colors"
                 >
                   Blog Page
+                </a>
+              </li>
+              <li className="pt-2 mt-2 border-t border-white/10">
+                <a
+                  href="/downloads"
+                  data-cursor-preview="Go To Downloads"
+                  className="flex items-center gap-1.5 text-white/40 hover:text-white transition-colors"
+                >
+                  Downloads Page
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </li>
             </ul>
