@@ -22,6 +22,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   const objectKey = downloadItem.objectKey;
 
   try {
+    // Return early if R2 bucket is not configured yet
+    if (!env.PORTFOLIO_FILES) {
+      return new Response('File downloads are temporarily unavailable (Storage not configured).', { status: 503 });
+    }
+
     const object = await env.PORTFOLIO_FILES.get(objectKey);
 
     if (object === null) {
