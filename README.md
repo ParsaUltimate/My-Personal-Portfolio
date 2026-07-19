@@ -19,7 +19,7 @@
 
 **Live Website:** [https://parsaghaei.dev](https://parsaghaei.dev)
 
-[![Portfolio Live Preview](https://parsaghaei.dev/og-image.jpg)](https://parsaghaei.dev)
+[![Portfolio Live Preview](https://parsaghaei.dev/og-image.png)](https://parsaghaei.dev)
 
 ## Why this project looks different
 
@@ -120,9 +120,10 @@ Production settings:
 
 ## Connect
 
-- GitHub: `https://github.com/Dark-px`
+- GitHub: `https://github.com/ParsaUltimate`
 - Email: `contact@parsaghaei.dev`
 
 ---
 
 If this repo helped you, give it a star and build your own version.
+

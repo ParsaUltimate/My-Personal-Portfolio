@@ -1,6 +1,10 @@
-const puppeteer = require('puppeteer');
-const path = require('path');
-const fs = require('fs');
+import puppeteer from 'puppeteer';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function generateOGImage(htmlFile, outputFile) {
   console.log(`Generating ${outputFile}...`);
@@ -24,7 +28,7 @@ async function generateOGImage(htmlFile, outputFile) {
   await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
   
   // Wait a bit for fonts to load
-  await page.waitForTimeout(500);
+  await new Promise(r => setTimeout(r, 500));
   
   // Take screenshot
   const outputPath = path.resolve(__dirname, '../public', outputFile);
@@ -46,7 +50,9 @@ async function generateOGImage(htmlFile, outputFile) {
   try {
     console.log('🎨 Generating Open Graph images...\n');
     
-    await generateOGImage('portfolio-og.html', 'og-portfolio.png');
+    // Output directly to og-image.jpg or png, whichever the user prefers
+    // README.md uses og-image.jpg, we can save it as og-image.png and let it be
+    await generateOGImage('portfolio-og.html', 'og-image.png');
     
     console.log('\n✅ All OG images generated successfully!');
     console.log('\nNext steps:');
