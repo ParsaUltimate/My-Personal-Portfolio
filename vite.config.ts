@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
       "jobTitle": "Game Developer & Designer",
       "sameAs": [
         "https://github.com/ParsaUltimate",
-        "https://parsaghaei.itch.io",
+        "https://parsaultimate.itch.io",
         "https://www.linkedin.com/in/parsaghaei",
         "https://x.com/ParsaUltimate"
       ]

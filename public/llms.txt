@@ -27,7 +27,7 @@ Parsa Ghaei is a 17-year-old aspiring game developer from Iran. He is currently 
 
 ## Social & Profile Links
 - [GitHub Profile](https://github.com/ParsaUltimate) - Development repository and project source codes
-- [Itch.io Profile](https://parsaghaei.itch.io) - Playable builds, prototypes, and game releases
+- [Itch.io Profile](https://parsaultimate.itch.io) - Playable builds, prototypes, and game releases
 - [LinkedIn Profile](https://www.linkedin.com/in/parsaghaei) - Professional network and updates
 - [X / Twitter Profile](https://x.com/ParsaUltimate) - Development updates and game dev thoughts
 - [ArtStation Profile](https://www.artstation.com) - Game art, concept art, and visual designs

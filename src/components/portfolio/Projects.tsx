@@ -15,7 +15,7 @@ export const Projects = () => {
       mediaSrcSet: '/coming-soon-400.png 400w, /coming-soon-800.png 800w',
       mediaWebpSrcSet: '/coming-soon-400.webp 400w, /coming-soon-800.webp 800w',
       actionLabel: 'Play',
-      actionHref: 'https://parsaghaei.itch.io',
+      actionHref: 'https://parsaultimate.itch.io',
     },
     {
       number: '02',

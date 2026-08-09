@@ -5,7 +5,7 @@ export const Contact = () => {
   const contacts = [
     { icon: Mail, label: 'Email', handle: 'Get In Touch', href: 'mailto:contact@parsaghaei.dev' },
     { icon: Github, label: 'GitHub', handle: 'Open Profile', href: 'https://github.com/ParsaUltimate' },
-    { icon: Gamepad2, label: 'Itch.io', handle: 'Play Games', href: 'https://parsaghaei.itch.io' },
+    { icon: Gamepad2, label: 'Itch.io', handle: 'Play Games', href: 'https://parsaultimate.itch.io' },
     { icon: Linkedin, label: 'LinkedIn', handle: 'Connect', href: 'https://www.linkedin.com/in/parsaghaei' },
     { icon: Palette, label: 'ArtStation', handle: 'View Portfolio', href: 'https://www.artstation.com' },
     { icon: FaXTwitter, label: 'X', handle: 'Follow', href: 'https://x.com/ParsaUltimate' },
