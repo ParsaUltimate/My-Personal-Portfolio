@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
     ogTitle: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
     ogDescription:
       "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
-    ogImage: "/og-image.png",
+    ogImage: "https://parsaghaei.dev/og-image.png",
     canonicalUrl: "https://parsaghaei.dev/",
     h1: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
     schema: JSON.stringify({

@@ -16,19 +16,19 @@ const SEO_BY_HOST = {
 };
 
 const DEFAULT_SEO = {
-  title: "Parsa Ghaei | Game Developer & Designer",
+  title: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
   description:
-    "Parsa Ghaei - aspiring Game Developer and Game Designer studying Unity and C#. Building gameplay mechanics and documenting the journey into game development.",
+    "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
   keywords: "Game Developer, Game Designer, Unity, C#, Game Development, Portfolio, Parsa Ghaei",
   canonical: "https://parsaghaei.dev/",
-  ogTitle: "Parsa Ghaei | Game Developer & Designer",
+  ogTitle: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
   ogDescription:
-    "Aspiring Game Developer and Game Designer studying Unity and C#. Building gameplay mechanics and documenting the journey.",
-  ogImage: "https://parsaghaei.dev/hero-bg.png",
-  twitterTitle: "Parsa Ghaei | Game Developer & Designer",
+    "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
+  ogImage: "https://parsaghaei.dev/og-image.png",
+  twitterTitle: "Parsa Ghaei | Eager to Become a Game Developer & Designer",
   twitterDescription:
-    "Aspiring Game Developer and Game Designer studying Unity and C#. Building gameplay mechanics and documenting the journey.",
-  twitterImage: "https://parsaghaei.dev/hero-bg.png",
+    "Hi, I'm Parsa — a 17-year-old game developer studying computer science in technical high school, currently learning Unity and C#.",
+  twitterImage: "https://parsaghaei.dev/og-image.png",
 };
 
 class ElementContentRewriter {
