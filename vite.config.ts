@@ -25,6 +25,12 @@ export default defineConfig(({ mode }) => {
       "url": "https://parsaghaei.dev/",
       "image": "https://parsaghaei.dev/og-image.png",
       "jobTitle": "Game Developer & Designer",
+      "knowsAbout": [
+        "Game Development",
+        "Unity Engine",
+        "C# Programming",
+        "Game Design"
+      ],
       "sameAs": [
         "https://github.com/ParsaUltimate",
         "https://parsaultimate.itch.io",

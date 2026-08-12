@@ -8,10 +8,10 @@ const SEO_BY_HOST = {
     canonical: "https://prompts.parsaghaei.dev/",
     ogTitle: "AI Prompt Library | Parsa Ghaei",
     ogDescription: "Structured prompts for writing, research, visual design, and coding workflows.",
-    ogImage: "https://prompts.parsaghaei.dev/og-prompts.svg",
+    ogImage: "https://parsaghaei.dev/og-image.png",
     twitterTitle: "AI Prompt Library | Parsa Ghaei",
     twitterDescription: "Structured prompts for writing, research, visual design, and coding workflows.",
-    twitterImage: "https://prompts.parsaghaei.dev/og-prompts.svg",
+    twitterImage: "https://parsaghaei.dev/og-image.png",
   },
 };
 
